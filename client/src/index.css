@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menu-btn {
+    background-color: black;
+}
+
+nav {
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #b2ccd6;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 100px;
+    flex-wrap: wrap;
+}
+
+nav .logo {
+    color: rgb(44, 35, 35);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+nav ul li:hover {
+    background-color: aqua;
+}
+
+nav ul li h5 {
+    color: #330d0d;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li h5.active,
+nav ul li h5:hover {
+    color: #111;
+    background: rgb(64, 112, 124);
+}
+
+nav .menu-btn i {
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    nav {
+        padding: 0 40px 0 50px;
+    }
+}
+
+@media (max-width: 920px) {
+    nav .menu-btn i {
+        display: block;
+    }
+    #click:checked~.menu-btn i:before {
+        content: "\f00d";
+    }
+    nav ul {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: rgb(209, 201, 201);
+        height: 100vh;
+        width: 100%;
+        text-align: center;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    #click:checked~ul {
+        left: 0;
+    }
+    nav ul li {
+        width: 100%;
+        margin: 40px 0;
+    }
+    nav ul li h5 {
+        width: 100%;
+        margin-left: -100%;
+        display: block;
+        font-size: 20px;
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    #click:checked~ul li h5 {
+        margin-left: 0px;
+    }
+    nav ul li h5.active,
+    nav ul li h5:hover {
+        background: none;
+        color: cyan;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: -1;
+    width: 100%;
+    padding: 0 30px;
+    color: #1b1b1b;
+}
+
+.content div {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+/* .picture {
+    border-radius: 200px;
+} */
+
+.profilename {
+    font-family: 'Murecho', sans-serif;
+    /* font-family: 'Oswald', sans-serif; */
+    /* font-family: 'Raleway', sans-serif; */
+    font-size: 48px;
+    text-shadow: 4px 3px rgba(36, 221, 107, 0.61);
+}
+
+.paragraf {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.honda {
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 4px 3px 8px rgba(36, 221, 107, 0.61);
+}
+
+.heading {
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer h4 {
+    color: beige;
+    font-family: 'Oswald', sans-serif
+}
+
+.footer li {
+    color: beige;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer {
+    position: static;
+    bottom: 0px;
+    left: 0px;
+    /* right: 0px; */
+}
+
+.fuffa {
+    font-family: 'Oswald', sans-serif;
+    text-shadow: 4px 3px 8px rgba(36, 221, 107, 0.61);
+}
+
+.mama {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* .photobg::before {
+    content: "";
+    position: relative;
+    background: url("./op6.jpg") no-repeat center center/cover;
+    /* height: 100vh;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.89; */
+
+
+/* .fab fa-facebook {
+    width: 25px;
+} */
+
+.social {
+    cursor: pointer;
+}
+
+.social:hover {
+    transform: translatex(15px);
+}
+
+.bgphoto {
+    box-shadow: 10px 8px #b2ccd6;
+}
+
+.data {
+    box-shadow: 7px 5px 6px 5px #2e5a6b;
+}
+
+.boder {
+    content: "";
+    position: relative;
+    background: url("./op6.jpg") no-repeat center center/cover;
+    height: 100vh;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+.sender {
+    color: rgb(250, 8, 8);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+}
+
+.parabab {
+    color: darkcyan;
+    line-height: 28px;
+}
+
+.mern {
+    box-shadow: -5px -8px 3px rgb(36, 185, 190);
+}
